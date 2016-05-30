@@ -1,0 +1,26 @@
+{
+  "name": "metl-cli",
+  "version": "0.0.1",
+  "description": "Command line tools for teh metl library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clubajax/metl-cli.git"
+  },
+  "keywords": [
+    "metl",
+    "ui",
+    "web",
+    "components",
+    "cli"
+  ],
+  "author": "anm9tr@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/clubajax/metl-cli/issues"
+  },
+  "homepage": "https://github.com/clubajax/metl-cli#readme"
+}
