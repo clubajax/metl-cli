@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Command line tools for teh metl library",
   "main": "index.js",
+  "bin": {
+    "metl": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/clubajax/metl-cli/issues"
   },
-  "homepage": "https://github.com/clubajax/metl-cli#readme"
+  "homepage": "https://github.com/clubajax/metl-cli#readme",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
 }
