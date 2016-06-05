@@ -12,7 +12,7 @@ module.exports = new Promise(function (resolve, reject) {
     });
 // hack to avoid loading a Gruntfile
 // You can skip this and just use a Gruntfile instead
-//grunt.task.init = function() {};
+grunt.task.init = function() {};
 
     grunt.registerInitTask('test-async', 'testing', function(MONSTER) {
         console.log('TEST ASYNC');

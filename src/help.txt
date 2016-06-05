@@ -1,0 +1,6 @@
+metl help
+
+Create
+    There are shortcuts for creating components. Run the following command to create 'my-component':
+        metl create:my-component
+    This will create a my-component skeleton in a components/my-component folder

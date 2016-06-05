@@ -1,17 +1,12 @@
 #!/usr/bin/env node
 
 var
+    helpTxt,
     promise,
     action,
     option,
-    help;
-
-help = `
-Create
-    There are shortcuts for creating components. Run the following command to create 'my-component':
-        metl create:my-component
-    This will create a my-component skeleton in a components/my-component folder.
-`;
+    help,
+    fs = require('fs');
 
 
 process.argv.forEach(function (arg) {
@@ -25,20 +20,23 @@ process.argv.forEach(function (arg) {
     }
 });
 
-if(!action || action === 'help'){
-    console.log(help);
-    process.exit(0);
-}
 
 switch(action){
     case 'init':
-        require('./src/init');
+        promise = require('./src/init');
         break;
     case 'serve':
-        require('./src/serve');
+        console.log('serve...');
+        promise = require('./src/serve');
         break;
     case 'grunt':
         promise = require('./src/grunt');
+        break;
+    case 'help':
+    default:
+        helpTxt = fs.readFileSync( __dirname+ '/src/help.txt').toString();
+        console.log(helpTxt);
+        process.exit(0);
         break;
 }
 
