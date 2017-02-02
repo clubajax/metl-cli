@@ -12,7 +12,7 @@ try{
 
 function mix (def, proj) {
     Object.keys(def).forEach(function (key) {
-        if(proj[key]){
+        if(proj[key] !== undefined){
             if(typeof def[key] === 'object'){
                 mix(def[key], proj[key]);
             }else{
@@ -22,5 +22,6 @@ function mix (def, proj) {
     });
 }
 
+//console.log('MIX!!!!!!!!!!');
 mix(defaultConfig, projectConfig);
-module.exports = projectConfig;
+module.exports = defaultConfig;
