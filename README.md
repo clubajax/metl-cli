@@ -11,8 +11,8 @@ Command line tools for the metl library
     
 ## Config
 
-metl-cli requires a `metl.config.js` file in the root of the project. To see an example, look at the `src/default-config.js`
-file.
+metl-cli requires a `metl.config.js` file in the root of the project. To see an example, look at the 
+[`src/default-config.js`](src/default-config.js) file.
 
 ### Config options:
 

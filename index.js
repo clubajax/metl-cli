@@ -21,6 +21,10 @@ process.argv.forEach(function (arg) {
 });
 
 
+console.log('action:', action, global.running);
+console.log('process.argv', process.argv);
+global.running = true;
+
 switch(action){
     case 'init':
         promise = require('./src/init');
@@ -32,17 +36,24 @@ switch(action){
     case 'grunt':
         promise = require('./src/grunt');
         break;
+    case 'watch':
+        promise = require('./src/watch');
+        break;
     case 'help':
     default:
+        console.log('DEFAULT', action);
         helpTxt = fs.readFileSync( __dirname+ '/src/help.txt').toString();
         console.log(helpTxt);
         process.exit(0);
         break;
 }
 
+console.log('promise', promise);
 promise.then(function () {
     console.log('promise exit');
     process.exit(0);
+}, function (e) {
+    console.log('[error]', e);
 });
 
 

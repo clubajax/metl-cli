@@ -1,7 +1,7 @@
 {
   "name": "metl-cli",
   "version": "0.0.1",
-  "description": "Command line tools for teh metl library",
+  "description": "Command line tools for the metl library",
   "main": "index.js",
   "bin": {
     "metl": "./index.js"
@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/clubajax/metl-cli#readme",
   "dependencies": {
+    "grunt-contrib-watch": "^1.0.0",
     "prompt": "^1.0.0"
   }
 }

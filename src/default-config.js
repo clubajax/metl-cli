@@ -30,6 +30,12 @@ var config = {
 
         // Tell grunt task to open the browser
         openBrowser: false
+    },
+    watch: {
+        enabled: true,
+        //less:['./style/*.less'],
+        scripts:['./ui/**/*.html', './lib/**/*.js'],
+        port: 35740 // 35730 default
     }
 };
 
